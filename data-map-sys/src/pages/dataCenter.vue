@@ -1,8 +1,16 @@
 <template>
 <div id="data-center">
-  <navbar></navbar>
-  <router-view></router-view>
-  <myfooter></myfooter>
+  <el-container>
+    <el-header>
+      <navbar></navbar>
+    </el-header>
+    <el-main>
+      <router-view></router-view>
+    </el-main>
+    <el-footer>
+      <!-- <myfooter></myfooter> -->
+    </el-footer>
+  </el-container>
 </div>
 </template>
 <script>
@@ -20,4 +28,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  .el-header{
+    background-color: #008CD7;
+  }
 </style>

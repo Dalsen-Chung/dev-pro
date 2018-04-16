@@ -34,6 +34,7 @@ export default {
     text-align: center;
     background-color: #008CD7;
     height: 60px;
+    overflow: hidden;  //后续需要媒体查询
   }
   .navbar-title{
     display: inline-block;
@@ -51,7 +52,6 @@ export default {
     color: #F7A727;
     font-weight: bold;
     font-size: 19px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   }
   #navbar ul{
     display: inline-block;
@@ -61,5 +61,6 @@ export default {
   }
   #navbar ul li{
     font-weight: bold;
+    font-size: 15px;
   }
 </style>
