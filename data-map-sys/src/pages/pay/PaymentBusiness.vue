@@ -8,10 +8,10 @@
       <el-tabs :tab-position="tabPosition">
 
         <el-tab-pane label="总发卡量">
-          <div class="card-capacity">
-            <div class="card-title">
-              <icon name="icCard" :scale="4"></icon>
+          <div class="total-card">
+            <div class="panel-title">
               <span>总发卡量</span>
+              <i class="iconfont icon-ICcard"></i>
             </div>
             <span class="iCountUp">
               <countup
@@ -23,17 +23,41 @@
         </el-tab-pane>
 
         <el-tab-pane label="云卡用户量">
-          <div class="card-capacity">
-            <div class="card-title">
+          <div class="total-users">
+            <div class="panel-title">
               <span>云卡用户量</span>
-              <icon name="icCard" :scale="4"></icon>
+              <i class="iconfont icon-users"></i>
             </div>
           </div>
         </el-tab-pane>
 
-        <el-tab-pane label="卡类型组成">卡类型组成</el-tab-pane>
-        <el-tab-pane label="昨日消费金额">昨日消费金额</el-tab-pane>
-        <el-tab-pane label="昨日充值金额">昨日充值金额</el-tab-pane>
+        <el-tab-pane label="卡类型组成">
+          <div class="card-type-composition">
+            <div class="panel-title">
+              <span>卡类型组成</span>
+              <i class="iconfont icon-zuhe"></i>
+            </div>
+          </div>
+        </el-tab-pane>
+
+        <el-tab-pane label="昨日消费金额">
+          <div class="payoff-lastday">
+            <div class="panel-title">
+              <span>昨日消费金额</span>
+              <i class="iconfont icon-total"></i>
+            </div>
+          </div>
+        </el-tab-pane>
+
+        <el-tab-pane label="昨日充值金额">
+          <div class="addup-lastday">
+            <div class="panel-title">
+              <span>昨日充值金额</span>
+              <i class="iconfont icon-addup"></i>
+            </div>
+          </div>
+        </el-tab-pane>
+
       </el-tabs>
     </el-main>
   </el-container>
@@ -80,20 +104,24 @@ export default {
     display: block;
     color: #008CD7;
 }
-#payBusiness .card-capacity .iCountUp {
+#payBusiness .iconfont {
+    font-size: 23px;
+    color: #f7b34d;
+}
+#payBusiness .total-card .iCountUp {
     display: block;
     text-align: center;
     font-size: 5em;
     margin: 0;
     color: #4d63bc;
 }
-#payBusiness .card-capacity .card-title {
+#payBusiness .panel-title {
     height: 40px;
     margin: 0 50px;
     color: #008CD7;
     font-weight: bold;
 }
-#payBusiness .card-capacity .card-title span {
-    font-size: 20px;
+#payBusiness .panel-title span {
+    font-size: 18px;
 }
 </style>

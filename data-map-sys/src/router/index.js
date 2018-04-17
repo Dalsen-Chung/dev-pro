@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import DataCenter from '@/pages/DataCenter'
-import PaymentBusiness from '@/pages/PaymentBusiness'
-import SmartCity from '@/pages/SmartCity'
-import IdcBusiness from '@/pages/IdcBusiness'
+import PaymentBusiness from '@/pages/pay/PaymentBusiness'
+import SmartCity from '@/pages/city/SmartCity'
+import IdcBusiness from '@/pages/idc/IdcBusiness'
 
 Vue.use(Router)
 
