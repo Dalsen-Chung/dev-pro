@@ -14,10 +14,7 @@
               <i class="iconfont icon-ICcard"></i>
             </div>
             <span class="iCountUp">
-              <countup
-                :startVal="countup.startVal"
-                :endVal="countup.endVal" :decimals="countup.decimals"
-                :duration="countup.duration" :options="countup.options" />张
+              <counter v-bind="countOne"></counter>
             </span>
           </div>
         </el-tab-pane>
@@ -65,28 +62,18 @@
 </template>
 
 <script>
-import ICountUp from 'vue-countup-v2'
+import Counter from '@/components/Counter'
 export default {
   name: "PaymentBusiness",
   components: {
-    'countup': ICountUp
+    'counter': Counter
   },
   data: () => ({
     tabPosition: 'left',
     title: '业务概况',
-    countup: {
-      startVal: 0,
-      endVal: 120500,
-      decimals: 0,
-      duration: 1,
-      options: {
-        useEasing: true,
-        useGrouping: true,
-        separator: ',',
-        decimal: '.',
-        prefix: '',
-        suffix: ''
-      }
+    countOne: {
+      getDataUrl: 'http:xxx',
+      suffix: '张'
     }
   }),
   methods: {
@@ -109,17 +96,16 @@ export default {
     color: #f7b34d;
 }
 #payBusiness .warper {
-  border-radius: 10px;
-  padding: 20px;
-  margin-left: 20px;
-  background-color: #EAEAEA;
-  box-shadow: inset -3px -3px 60px 0px #c0c4cc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 20px;
+    background-color: #EAEAEA;
+    box-shadow: inset -3px -3px 60px 0 #c0c4cc;
 }
 #payBusiness .total-card .iCountUp {
     display: block;
     text-align: center;
     font-size: 5em;
-    margin: 0;
     color: #4d63bc;
 }
 #payBusiness .panel-title {
