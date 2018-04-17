@@ -8,7 +8,7 @@
       <el-tabs :tab-position="tabPosition">
 
         <el-tab-pane label="总发卡量">
-          <div class="total-card">
+          <div class="warper total-card">
             <div class="panel-title">
               <span>总发卡量</span>
               <i class="iconfont icon-ICcard"></i>
@@ -23,7 +23,7 @@
         </el-tab-pane>
 
         <el-tab-pane label="云卡用户量">
-          <div class="total-users">
+          <div class="warper total-users">
             <div class="panel-title">
               <span>云卡用户量</span>
               <i class="iconfont icon-users"></i>
@@ -32,7 +32,7 @@
         </el-tab-pane>
 
         <el-tab-pane label="卡类型组成">
-          <div class="card-type-composition">
+          <div class="warper card-type-composition">
             <div class="panel-title">
               <span>卡类型组成</span>
               <i class="iconfont icon-zuhe"></i>
@@ -41,7 +41,7 @@
         </el-tab-pane>
 
         <el-tab-pane label="昨日消费金额">
-          <div class="payoff-lastday">
+          <div class="warper payoff-lastday">
             <div class="panel-title">
               <span>昨日消费金额</span>
               <i class="iconfont icon-total"></i>
@@ -50,7 +50,7 @@
         </el-tab-pane>
 
         <el-tab-pane label="昨日充值金额">
-          <div class="addup-lastday">
+          <div class="warper addup-lastday">
             <div class="panel-title">
               <span>昨日充值金额</span>
               <i class="iconfont icon-addup"></i>
@@ -107,6 +107,13 @@ export default {
 #payBusiness .iconfont {
     font-size: 23px;
     color: #f7b34d;
+}
+#payBusiness .warper {
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 20px;
+  background-color: #EAEAEA;
+  box-shadow: inset -3px -3px 60px 0px #c0c4cc;
 }
 #payBusiness .total-card .iCountUp {
     display: block;
