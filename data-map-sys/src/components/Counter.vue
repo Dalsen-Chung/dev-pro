@@ -1,6 +1,5 @@
 <template>
 <div class="counter">
-  <button type="button" name="button" @click="addup">add</button>
   <countup :startVal="startVal" :endVal="endVal" :decimals="decimals" :duration="duration" :options="{
       useEasing: true,useGrouping: true,separator: ',',decimal: '.',prefix: '',suffix: suffix
     }" />
@@ -34,11 +33,13 @@ export default {
   },
   mounted() {
     this.endVal = 1257000;
+    // let that = this;
+    // setInterval(function(){
+    //   that.endVal ++;
+    // },1000);
   },
   methods: {
-    addup() {
-      this.endVal += 1000;
-    }
+
   }
 }
 </script>

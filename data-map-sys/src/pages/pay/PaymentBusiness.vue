@@ -25,6 +25,9 @@
               <span>云卡用户量</span>
               <i class="iconfont icon-users"></i>
             </div>
+            <span class="iCountUp">
+              <counter v-bind="countTwo"></counter>
+            </span>
           </div>
         </el-tab-pane>
 
@@ -69,11 +72,15 @@ export default {
     'counter': Counter
   },
   data: () => ({
-    tabPosition: 'left',
+    tabPosition: 'left',     //左边导航列表的配置项
     title: '业务概况',
     countOne: {
       getDataUrl: 'http:xxx',
       suffix: '张'
+    },
+    countTwo: {
+      getDataUrl: 'http:xxx',
+      suffix: '位'
     }
   }),
   methods: {
@@ -102,7 +109,7 @@ export default {
     background-color: #EAEAEA;
     box-shadow: inset -3px -3px 60px 0 #c0c4cc;
 }
-#payBusiness .total-card .iCountUp {
+#payBusiness .iCountUp {
     display: block;
     text-align: center;
     font-size: 5em;
