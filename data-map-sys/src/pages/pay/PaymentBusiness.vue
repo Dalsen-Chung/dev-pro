@@ -72,7 +72,7 @@ export default {
     'counter': Counter
   },
   data: () => ({
-    tabPosition: 'left',     //左边导航列表的配置项
+    tabPosition: 'left', //左边导航列表的配置项
     title: '业务概况',
     countOne: {
       getDataUrl: 'http:xxx',
