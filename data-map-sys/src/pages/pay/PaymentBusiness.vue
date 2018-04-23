@@ -16,6 +16,7 @@
             <span class="iCountUp">
               <counter v-bind="countOne"></counter>
             </span>
+            <hot-table requestUrl='xxx' showType='card'></hot-table>
           </div>
         </el-tab-pane>
 
@@ -28,6 +29,7 @@
             <span class="iCountUp">
               <counter v-bind="countTwo"></counter>
             </span>
+            <hot-table requestUrl='xxx' showType='regist'></hot-table>
           </div>
         </el-tab-pane>
 
@@ -66,10 +68,12 @@
 
 <script>
 import Counter from '@/components/Counter'
+import HotTable from '@/components/HotTable'
 export default {
   name: "PaymentBusiness",
   components: {
-    'counter': Counter
+    'counter': Counter,
+    'hot-table': HotTable
   },
   data: () => ({
     tabPosition: 'left', //左边导航列表的配置项
