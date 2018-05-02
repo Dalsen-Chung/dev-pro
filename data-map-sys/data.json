@@ -1,24 +1,10 @@
 {
- "api": [
-  {
-   "text": "数据统计",
-   "link": "#",
-   "hot": true
+  "totalCards" : {
+    "amount" : "1257000",
+    "date" : "2018-05-02"
   },
-  {
-   "text": "数据检测",
-   "link": "#",
-   "hot": true
-  },
-  {
-   "text": "流量分析",
-   "link": "#",
-   "hot": true
-  },
-  {
-   "text": "广告发布",
-   "link": "#",
-   "hot": false
+  "totalUsers" : {
+    "amount" : "1258000",
+    "date" : "2018-05-02"
   }
- ]
 }

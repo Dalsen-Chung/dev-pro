@@ -32,14 +32,15 @@ export default {
     }
   },
   mounted() {
-    this.endVal = 1257000;
-    // let that = this;
-    // setInterval(function(){
-    //   that.endVal ++;
-    // },1000);
+    this.requestAmount();
   },
   methods: {
-
+    requestAmount : function () {
+      this.$http.get(this.getDataUrl).then((res) => {
+        let data = res.data;
+        this.endVal = parseInt(data.amount);
+      });
+    }
   }
 }
 </script>

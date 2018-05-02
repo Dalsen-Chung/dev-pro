@@ -79,11 +79,11 @@ export default {
     tabPosition: 'left', //左边导航列表的配置项
     title: '业务概况',
     countOne: {
-      getDataUrl: 'http:xxx',
+      getDataUrl: 'http://localhost:3003/totalCards',
       suffix: '张'
     },
     countTwo: {
-      getDataUrl: 'http:xxx',
+      getDataUrl: 'http://localhost:3003/totalUsers',
       suffix: '位'
     }
   }),
