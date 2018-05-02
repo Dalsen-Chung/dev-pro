@@ -16,39 +16,7 @@ export default {
   data: () => ({
     cloumn: [],
     title : '',
-    tableData: [{
-      sendCardDate: '2016-05-02',
-      cardType: '王小虎',
-      cardAmount: '上海市普陀区金沙江路 1518 弄'
-    }, {
-      sendCardDate: '2016-05-04',
-      cardType: '王小虎',
-      cardAmount: '上海市普陀区金沙江路 1517 弄'
-    }, {
-      sendCardDate: '2016-05-01',
-      cardType: '王小虎',
-      cardAmount: '上海市普陀区金沙江路 1519 弄'
-    }, {
-      sendCardDate: '2016-05-03',
-      cardType: '王小虎',
-      cardAmount: '上海市普陀区金沙江路 1516 弄'
-    },{
-      sendCardDate: '2016-05-02',
-      cardType: '王小虎',
-      cardAmount: '上海市普陀区金沙江路 1518 弄'
-    }, {
-      sendCardDate: '2016-05-04',
-      cardType: '王小虎',
-      cardAmount: '上海市普陀区金沙江路 1517 弄'
-    }, {
-      sendCardDate: '2016-05-01',
-      cardType: '王小虎',
-      cardAmount: '上海市普陀区金沙江路 1519 弄'
-    }, {
-      sendCardDate: '2016-05-03',
-      cardType: '王小虎',
-      cardAmount: '上海市普陀区金沙江路 1516 弄'
-    }],
+    tableData: [],
     sendCloumn: [{
         label: '发卡日期',
         prop: 'sendCardDate'
@@ -87,23 +55,41 @@ export default {
     }
   },
   methods: {
-    init : function () {
+    init : function (arr) {
       if (this.showType === 'card'){
         this.cloumn = this.sendCloumn;
         this.title = '前十条发卡记录';
+        arr.forEach((obj, index) => {
+          let tempObj = {};
+          tempObj.sendCardDate = obj.sendDate;
+          tempObj.cardType = obj.cardType;
+          tempObj.cardAmount = obj.amount;
+          this.tableData.push(tempObj);
+        });
       }else if (this.showType === 'regist'){
         this.cloumn = this.registCloumn;
         this.title = '前十条注册记录';
+        arr.forEach((obj, index) => {
+          let tempObj = {};
+          tempObj.registDate = obj.registDate;
+          tempObj.client = obj.os;
+          tempObj.userAccount  = obj.name;
+          this.tableData.push(tempObj);
+        });
       }else{
         throw new Error('未填写表格数据类型字段');
       }
     },
     requestData: function() {
-
+      this.$http.get(this.requestUrl).then((res) => {
+        this.init(res.data);
+      },(error) => {
+        console.log(error)
+      })
     }
   },
   mounted() {
-    this.init();
+    this.requestData();
   }
 }
 </script>

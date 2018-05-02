@@ -6,5 +6,109 @@
   "totalUsers" : {
     "amount" : "1258000",
     "date" : "2018-05-02"
-  }
+  },
+  "sendCards" : [
+    {
+      "sendDate" : "2018-4-1",
+      "cardType" : "老人卡",
+      "amount": "5"
+    },
+    {
+      "sendDate" : "2018-4-2",
+      "cardType" : "学生卡",
+      "amount": "6"
+    },
+    {
+      "sendDate" : "2018-4-3",
+      "cardType" : "押金卡",
+      "amount": "7"
+    },
+    {
+      "sendDate" : "2018-4-4",
+      "cardType" : "爱心卡",
+      "amount": "4"
+    },
+    {
+      "sendDate" : "2018-4-5",
+      "cardType" : "智慧通卡",
+      "amount": "3"
+    },
+    {
+      "sendDate" : "2018-4-6",
+      "cardType" : "老人卡",
+      "amount": "5"
+    },
+    {
+      "sendDate" : "2018-4-1",
+      "cardType" : "老人卡",
+      "amount": "5"
+    },
+    {
+      "sendDate" : "2018-4-1",
+      "cardType" : "老人卡",
+      "amount": "5"
+    },
+    {
+      "sendDate" : "2018-4-1",
+      "cardType" : "老人卡",
+      "amount": "5"
+    },
+    {
+      "sendDate" : "2018-4-1",
+      "cardType" : "老人卡",
+      "amount": "5"
+    }
+  ],
+  "registors" : [
+    {
+      "registDate" : "2018-3-1",
+      "os" : "android",
+      "name" : "张三"
+    },
+    {
+      "registDate" : "2018-3-2",
+      "os" : "ios",
+      "name" : "李四"
+    },
+    {
+      "registDate" : "2018-3-3",
+      "os" : "android",
+      "name" : "王五"
+    },
+    {
+      "registDate" : "2018-3-4",
+      "os" : "ios",
+      "name" : "黄六"
+    },
+    {
+      "registDate" : "2018-3-5",
+      "os" : "android",
+      "name" : "刘七"
+    },
+    {
+      "registDate" : "2018-3-2",
+      "os" : "ios",
+      "name" : "李四"
+    },
+    {
+      "registDate" : "2018-3-2",
+      "os" : "ios",
+      "name" : "李四"
+    },
+    {
+      "registDate" : "2018-3-2",
+      "os" : "ios",
+      "name" : "李四"
+    },
+    {
+      "registDate" : "2018-3-2",
+      "os" : "ios",
+      "name" : "李四"
+    },
+    {
+      "registDate" : "2018-3-2",
+      "os" : "ios",
+      "name" : "李四"
+    }
+  ]
 }

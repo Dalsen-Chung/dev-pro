@@ -16,7 +16,7 @@
             <span class="iCountUp">
               <counter v-bind="countOne"></counter>
             </span>
-            <hot-table requestUrl='xxx' showType='card'></hot-table>
+            <hot-table v-bind="tableOne"></hot-table>
           </div>
         </el-tab-pane>
 
@@ -29,7 +29,7 @@
             <span class="iCountUp">
               <counter v-bind="countTwo"></counter>
             </span>
-            <hot-table requestUrl='xxx' showType='regist'></hot-table>
+            <hot-table v-bind="tableTwo"></hot-table>
           </div>
         </el-tab-pane>
 
@@ -85,6 +85,14 @@ export default {
     countTwo: {
       getDataUrl: 'http://localhost:3003/totalUsers',
       suffix: '位'
+    },
+    tableOne: {
+      requestUrl: 'http://localhost:3003/sendCards',
+      showType: 'card'
+    },
+    tableTwo: {
+      requestUrl: 'http://localhost:3003/registors',
+      showType: 'regist'
     }
   }),
   methods: {
