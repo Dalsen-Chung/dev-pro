@@ -8,10 +8,11 @@ import { Container, Main, Header, Footer, Tabs, TabPane, Table, TableColumn, Men
 import axios from 'axios'
 let echarts = require('echarts/lib/echarts')
 // 引入柱状图
-require('echarts/lib/chart/bar');
+require('echarts/lib/chart/pie');
 // 引入提示框和标题组件
 require('echarts/lib/component/tooltip');
 require('echarts/lib/component/title');
+require('echarts/lib/component/legendScroll');
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios

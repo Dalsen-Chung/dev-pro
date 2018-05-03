@@ -29,6 +29,7 @@
             <span class="iCountUp">
               <counter v-bind="countTwo"></counter>
             </span>
+            <data-to-pie v-bind="appUseDataToPie"></data-to-pie>
             <hot-table v-bind="tableTwo"></hot-table>
           </div>
         </el-tab-pane>
@@ -69,11 +70,13 @@
 <script>
 import Counter from '@/components/Counter'
 import HotTable from '@/components/HotTable'
+import DataToPie from '@/components/DataToPie'
 export default {
   name: "PaymentBusiness",
   components: {
     'counter': Counter,
-    'hot-table': HotTable
+    'hot-table': HotTable,
+    'data-to-pie': DataToPie
   },
   data: () => ({
     tabPosition: 'left', //左边导航列表的配置项
@@ -93,6 +96,12 @@ export default {
     tableTwo: {
       requestUrl: 'http://localhost:3003/registors',
       showType: 'regist'
+    },
+    appUseDataToPie: {
+      getDataUrl: 'http://localhost:3003/appUserAmount',
+      text: 'APP用户下载量',
+      subtext: 'Ios/Android',
+      seriesname: '用户类型'
     }
   }),
   methods: {
