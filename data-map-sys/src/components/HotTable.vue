@@ -95,7 +95,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .hotTable {
-    margin: 50px 5% 15px;
+    margin: 20px 5% 15px;
 }
 .hotTable .panel-title {
     height: 40px;

@@ -6,11 +6,16 @@ import router from './router'
 // import Vuex from 'vuex'              //暂时用不上
 import { Container, Main, Header, Footer, Tabs, TabPane, Table, TableColumn, Menu, MenuItem } from 'element-ui'
 import axios from 'axios'
-// import echarts from 'echarts'    //按需引入
+let echarts = require('echarts/lib/echarts')
+// 引入柱状图
+require('echarts/lib/chart/bar');
+// 引入提示框和标题组件
+require('echarts/lib/component/tooltip');
+require('echarts/lib/component/title');
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
-// Vue.prototype.$echarts = echarts
+Vue.prototype.$echarts = echarts
 Vue.use(Container)
 Vue.use(Main)
 Vue.use(Header)
