@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueLazyload from 'vue-lazyload'
 // import Vuex from 'vuex'              //暂时用不上
 import { Container, Main, Header, Footer, Tabs, TabPane, Table, TableColumn, Menu, MenuItem } from 'element-ui'
 import axios from 'axios'
@@ -27,6 +28,11 @@ Vue.use(Table)
 Vue.use(TableColumn)
 Vue.use(Menu)
 Vue.use(MenuItem)
+Vue.use(VueLazyload,{
+  preLoad: 1.3,
+  error: './static/error.png',
+  loading: './static/loading.gif'
+})
 // Vue.use(Vuex);
 
 /* eslint-disable no-new */

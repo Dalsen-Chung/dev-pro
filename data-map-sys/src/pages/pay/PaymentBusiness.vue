@@ -40,6 +40,8 @@
               <span>卡类型组成</span>
               <i class="iconfont icon-zuhe"></i>
             </div>
+            <all-cards></all-cards>
+            <data-to-pie v-bind="cardTypeAmountDataToPie"></data-to-pie>
           </div>
         </el-tab-pane>
 
@@ -71,12 +73,14 @@
 import Counter from '@/components/Counter'
 import HotTable from '@/components/HotTable'
 import DataToPie from '@/components/DataToPie'
+import AllCards from '@/components/AllCards'
 export default {
   name: "PaymentBusiness",
   components: {
     'counter': Counter,
     'hot-table': HotTable,
-    'data-to-pie': DataToPie
+    'data-to-pie': DataToPie,
+    'all-cards': AllCards
   },
   data: () => ({
     tabPosition: 'left', //左边导航列表的配置项
@@ -101,7 +105,15 @@ export default {
       getDataUrl: 'http://localhost:3003/appUserAmount',
       text: 'APP用户下载量',
       subtext: 'Ios/Android',
-      seriesname: '用户类型'
+      seriesname: '用户类型',
+      canvasId: 'appUseDataToPie'
+    },
+    cardTypeAmountDataToPie: {
+      getDataUrl: 'http://localhost:3003/cardTypeAmount',
+      text: '卡类型组成',
+      subtext: '共11种卡类型',
+      seriesname: '卡类型',
+      canvasId: 'cardTypeAmountDataToPie'
     }
   }),
   methods: {

@@ -26,6 +26,10 @@ export default {
     seriesname: {
       type: String,
       required: true
+    },
+    canvasId: {
+      type: String,
+      required: true
     }
   },
   methods: {
@@ -45,12 +49,16 @@ export default {
       });
     },
     inintChart: function() {
-      let dom = document.getElementsByClassName('pieCanvas')[0];
+      let index = this.findParentIndex();
+      let dom = document.getElementsByClassName('pieCanvas')[index];
       let myChart = this.$echarts.init(dom);
       let option = {
         title: {
           text: this.text,
           subtext: this.subtext,
+          subtextStyle: {
+            fontSize: 13
+          },
           x: 'center'
         },
         tooltip: {
@@ -78,6 +86,22 @@ export default {
         }]
       };
       myChart.setOption(option);
+    },
+    findParentIndex: function() {
+      let ret = 0;
+      let pieCanvas = document.getElementsByClassName('pieCanvas');
+      switch (this.canvasId) {
+        case 'appUseDataToPie':
+          pieCanvas[0].style.width = '500px';
+          pieCanvas[0].style.height = '300px';
+          break;
+        case 'cardTypeAmountDataToPie':
+          pieCanvas[1].style.width = '800px';
+          pieCanvas[1].style.height = '450px';
+          ret = 1;
+          break;
+      }
+      return ret;
     }
   },
   mounted() {
@@ -87,8 +111,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .pieCanvas {
-    width: 500px;
-    height: 300px;
-    margin: 25px auto;
+    margin: 30px auto;
 }
 </style>
