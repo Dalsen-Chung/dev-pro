@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "countup.js": "^1.9.3",
     "echarts": "^4.0.4",
     "element-ui": "^2.3.4",

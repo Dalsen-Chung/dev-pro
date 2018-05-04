@@ -5,7 +5,9 @@
       <navbar></navbar>
     </el-header>
     <el-main>
-      <router-view></router-view>
+      <!-- <keep-alive> -->
+        <router-view></router-view>
+      <!-- </keep-alive> -->
     </el-main>
     <el-footer>
       <!-- <myfooter></myfooter> -->

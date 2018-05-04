@@ -7,6 +7,7 @@ import VueLazyload from 'vue-lazyload'
 // import Vuex from 'vuex'              //暂时用不上
 import { Container, Main, Header, Footer, Tabs, TabPane, Table, TableColumn, Menu, MenuItem } from 'element-ui'
 import axios from 'axios'
+import "babel-polyfill"     //兼容IE,在IE中使用ES6
 let echarts = require('echarts/lib/echarts')
 // 引入柱状图
 require('echarts/lib/chart/pie');
